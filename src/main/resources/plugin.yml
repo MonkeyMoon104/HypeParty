@@ -1,0 +1,84 @@
+name: AcromVote
+version: '${project.version}'
+main: com.monkey.acromvote.AcromVote
+api-version: '1.20'
+author: MonkeyMoon104
+description: VotingPlugin Custom
+
+commands:
+  vote:
+    description: Vota il server
+    usage: /vote
+
+  Hype-Party:
+    description: Avvia o ferma l'Hype Party
+    usage: /Hype-Party <start|stop>
+    permission: hypeparty.manage.set
+    aliases: [hp]
+    subcommands:
+      start:
+        description: Avvia l'Hype Party
+        usage: /Hype-Party start
+        permission: hypeparty.manage.set
+      stop:
+        description: Ferma l'Hype Party
+        usage: /Hype-Party stop
+        permission: hypeparty.manage.set
+      cooldown-start:
+        description: avvia il cooldown dell'hype party
+        usage: /Hype-Party cooldown-start
+        permission: hypeparty.manage.set
+
+  total-vote:
+    description: Visualizza i voti totali dei player
+    usage: /total-vote <player>
+    aliases: [hp]
+    subcommands:
+      player:
+        descrption: player che vuoi vedere i voti
+        usage: /total-vote <player>
+
+  donazione-eseguita:
+    description: Aggiorna la bossbar dell'hype party per le donazioni
+    usage: /donazione-eseguita <player>
+    permission: hypeparty.donation.set
+
+  bossbar:
+    description: Manage bossbar
+    usage: /bossbar <subcomando>
+    permission: acromvote.bossbar.reset
+
+  today_votes:
+    description: Visualizza i voti giornalieri
+    usage: /today_votes
+    permission: acromtoday.vote.see
+
+permissions:
+  acromvote.partyvote.see:
+    description: Permission to see the vote party boss bar
+    default: true
+
+  hypeparty.manage.set:
+    description: Permette agli utenti di gestire le funzionalità dell'Hype Party
+    default: op
+
+  hypeparty.donation.set:
+    description: Permette agli utenti di eseguire il comando se è stata effettutata una donazione
+    default: op
+
+  acromvote.bossbar.reset:
+    description: Permette agli utenti di maneggiare la bossbar
+    default: op
+
+  acromtoday.vote.see:
+    description: Permette agli utenti di vedere i voti giornalieri
+    default: op
+
+config: config.yml
+
+depend:
+  - Votifier
+  - MinecraftITALIA-Votifier
+  - FastAsyncWorldEdit
+  - WorldGuard
+

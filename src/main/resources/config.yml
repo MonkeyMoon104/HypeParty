@@ -1,0 +1,6 @@
+vote_party:
+  max_votes: 50
+  max_donations: 5
+
+
+welcome_message: "titlemsg {player} &aBentornato! \n &eNon dimenticare di votare! &7(&b/vote&7)"
