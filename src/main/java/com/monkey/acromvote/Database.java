@@ -9,7 +9,7 @@ public class Database {
     static String yellow = "\u001B[38;2;255;255;0m";
     static String orange = "\u001B[38;2;255;165;0m";
 
-    static String table = "vote_party_stats";
+    static String table = "";
 
     public Database(AcromVote plugin) {
         this.plugin = plugin;
@@ -20,12 +20,12 @@ public class Database {
             return connection;
         }
 
-        String databaseSelect = "Plugin";
-        String host = "172.18.0.1:25567";
+        String databaseSelect = "";
+        String host = "";
 
         String url = "jdbc:mysql://" + host + "/" + databaseSelect;
-        String user = "TopolinoMangiaPisello";
-        String password = "Pisellone12Macumba";
+        String user = "";
+        String password = "";
 
         connection = DriverManager.getConnection(url, user, password);
 
