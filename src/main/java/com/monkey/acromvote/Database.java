@@ -36,12 +36,12 @@ public class Database {
 
     public static boolean checkAndReconnect() {
 
-        String databaseSelect = "Plugin";
-        String host = "172.18.0.1:25567";
+        String databaseSelect = "";
+        String host = "";
 
         String url = "jdbc:mysql://" + host + "/" + databaseSelect;
-        String user = "TopolinoMangiaPisello";
-        String password = "Pisellone12Macumba";
+        String user = "";
+        String password = "";
 
         try {
             if (connection != null && !connection.isClosed()) {
